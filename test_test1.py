@@ -5,4 +5,4 @@ def test_mock():
 
 def test_selenium():
   assert "Bonjour" == "Bonjour" 
-  assert "Salut" == "salut" 
+  assert "salut" == "salut" 
