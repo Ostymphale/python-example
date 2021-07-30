@@ -35,3 +35,9 @@ steps:
     pip install pytest pytest-azurepipelines
     pytest
   displayName: 'pytest'
+
+#- script: |
+#    startup.py
+#    hello_app/webapp.py
+#  displayName: Lancer l'application web
+  
