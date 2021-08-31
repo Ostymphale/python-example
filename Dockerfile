@@ -1,6 +1,6 @@
 # Pull a pre-built alpine docker image with nginx and python3 installed
 # FROM tiangolo/uwsgi-nginx:python3.8-alpine-2020-12-19
-FROM python:3.8-sli-buster
+FROM python:3.8-slim-buster
 
 # Set the port on which the app runs; make both values the same.
 #
@@ -27,6 +27,9 @@ WORKDIR /hello_app
 # Copy the app contents to the image
 COPY . /hello_app
 
+# Rajout
+RUN pip install -r requirements.txt
+CMD FLASK_APP=webapp flask run
 # If you have additional requirements beyond Flask (which is included in the
 # base image), generate a requirements.txt file with pip freeze and uncomment
 # the next three lines.
